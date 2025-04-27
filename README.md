@@ -248,6 +248,3 @@ Interactive API documentation is available at:
 └── test_all_apis.py    # Comprehensive test suite
 ```
 
-## 📝 License
-
-This project is licensed under the MIT License. 
