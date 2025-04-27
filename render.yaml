@@ -1,0 +1,20 @@
+services:
+  # A Docker web service
+  - type: web
+    name: bistro92-api
+    runtime: python
+    plan: free
+    repo: https://github.com/YOURUSERNAME/bistro92-api # Update this to your repository address
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app -k uvicorn.workers.UvicornWorker -b 0.0.0.0:$PORT --workers 4
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: bistro92-db
+          property: connectionString
+      - key: PYTHON_VERSION
+        value: 3.9.0
+
+databases:
+  - name: bistro92-db
+    plan: free 

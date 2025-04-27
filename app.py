@@ -1,5 +1,6 @@
 # main.py
 import asyncio
+import os
 from typing import List, Dict, Any
 
 import sqlalchemy
@@ -9,7 +10,18 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 # ─── Database & Tables ─────────────────────────────────────────────────────────
-DATABASE_URL = "sqlite:///./bistro92.db"
+# Use environment variable or default to SQLite for local development
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./bistro92.db")
+
+# Handle special case for Render PostgreSQL
+if DATABASE_URL.startswith("postgres://"):
+    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+
+# Configure connection based on database type
+connect_args = {}
+if DATABASE_URL.startswith("sqlite"):
+    connect_args = {"check_same_thread": False}
+
 database = Database(DATABASE_URL)
 metadata = sqlalchemy.MetaData()
 
@@ -35,7 +47,7 @@ order_items = sqlalchemy.Table(
 )
 
 engine = sqlalchemy.create_engine(
-    DATABASE_URL, connect_args={"check_same_thread": False}
+    DATABASE_URL, connect_args=connect_args
 )
 metadata.create_all(engine)
 
@@ -88,7 +100,13 @@ manager = ConnectionManager()
 
 
 # ─── App & Lifespan ─────────────────────────────────────────────────────────────
-app = FastAPI(title="Bistro92 High-Concurrency API")
+app = FastAPI(
+    title="Bistro92 High-Concurrency API",
+    description="A high-performance restaurant ordering system that handles extreme concurrency",
+    version="1.0.0",
+    docs_url="/docs",
+    redoc_url="/redoc",
+)
 
 # Add CORS middleware to allow WebSocket connections from any origin
 app.add_middleware(
@@ -103,9 +121,10 @@ app.add_middleware(
 @app.on_event("startup")
 async def startup():
     await database.connect()
-    # Enable WAL mode and set a busy timeout to reduce lock errors
-    await database.execute("PRAGMA journal_mode = WAL;")
-    await database.execute("PRAGMA busy_timeout = 30000;")
+    # Enable WAL mode for SQLite
+    if DATABASE_URL.startswith("sqlite"):
+        await database.execute("PRAGMA journal_mode = WAL;")
+        await database.execute("PRAGMA busy_timeout = 30000;")
     print("Database connected and configured")
 
 
@@ -113,6 +132,13 @@ async def startup():
 async def shutdown():
     await database.disconnect()
     print("Database disconnected")
+
+
+# ─── Root Endpoint for Health Checks ────────────────────────────────────────────
+@app.get("/")
+async def root():
+    """Root endpoint for health checks"""
+    return {"status": "ok", "message": "Bistro92 API is running"}
 
 
 # ─── Debug Endpoint ─────────────────────────────────────────────────────────────
@@ -127,7 +153,7 @@ async def debug_info(request: Request):
         },
         "websocket_connections": len(manager.active_connections),
         "database": {
-            "url": DATABASE_URL,
+            "url": DATABASE_URL.replace(DATABASE_URL.split("://")[0] + "://", "[REDACTED]://"),
             "connected": database.is_connected
         }
     }
