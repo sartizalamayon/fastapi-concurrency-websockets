@@ -26,6 +26,14 @@
 
 The API is deployed and running at: [https://fastapi-concurrency-websockets.onrender.com/](https://fastapi-concurrency-websockets.onrender.com/)
 
+- API Docs: [https://fastapi-concurrency-websockets.onrender.com/docs](https://fastapi-concurrency-websockets.onrender.com/docs)
+- Alternative Docs: [https://fastapi-concurrency-websockets.onrender.com/redoc](https://fastapi-concurrency-websockets.onrender.com/redoc)
+- Frontend Dashboard Repository: [https://github.com/riyajul505/cuet-hackathon-techathon](https://github.com/riyajul505/cuet-hackathon-techathon)
+
+### Frontend Dashboard
+
+![Frontend Dashboard](frontend_dahbaord.JPG)
+
 ## Project Overview
 
 Bistro92 is a smart ordering system designed to revolutionize the dining experience by eliminating long lines and order delays. The system features a device on each table that allows customers to browse the menu, customize items, adjust quantities, and place orders directly. This solution implements the backend API that powers the ordering system, with a focus on high-concurrency handling and real-time updates.
@@ -40,7 +48,6 @@ The API is built with FastAPI and features:
 
 ## Technology Stack
 
-![Tech Stack](https://mermaid.ink/img/pako:eNrVVclu2zAQ_RWCpxZw7QQ99GbYQNMWbYq0QHrqQZFGNhGK1JJUGgfw1_RfetAPaUhJthMnRdBLDwYMkcO3zJsZ8gJSIyBOi1pWzGrRlJXYGSmsBbOXYK2R8LZnLqTWTbPRC2EhoxLeLwtIRHNhdmJvP7qASOL9d6s3YrebXm0LnWrYUlclJJKM97CiEEbrYFfW4qqbV9BYrV3tRSa4V5KXMbBwBwvDCBNtfgvvYg_Ov3Mw5NcG9J8bqNU_N8BYUdJaM5FJ4CgDV-R9u-dg3Luy-CYFkx_s-KZZRs1SrpX2gzUxpBwkzHGl3ngtfMsXdGd2otHeH6VUG4jmZ1WKu8FTeFOkBkNPdqx4pHALqZEVlQ1CJMpuXZnHkVL74WZTKb3jtKEjBrAFfA1q4tKRkO8WU3nR79GmNpwQRZHC2s0oK_MCEuHDTOzHSspmw2nNxd_kPOO9BRlDnE6HELfwkMiEhGIxXcxRyhjiOIZ4PqLkjSTxCLU1m8c0ZuDnx2Dw1jqd8Q2dMo_kzIRXyPzyCZ5Aq7YOwXOZ5uiXZMkZJlm2ZCvMWIYBSRJI0hFFjZRJJtBnQ6lZn8wogx7VEPSiR-aXRSKCvtSUFMUlZCsCbJEtJuwm1aXIPJFP4NvZL55jxcLOGtvqU_j3-8HHGI_S445oDQlKE99IgdH8D72l6qV-k7u2c3c0tNJa54eOe2iVesvGH334yH5q-9Gfnn_0QvlD1fCfmz76Bb6VrDx27kcRvYdyqdGUx3d-_j5OmGfofgwx0AylHEHvVwu3tBLmQJzrcJvS0CRB4-UpzxB5kNvTJ20-bVa7q5u_WZ1Seb2lqzJP-w2F17wPxGE_TtJh84Gr60qrrHCeVwgRRsOZvFbRBu5X4ZoJNGU4oeSGzxB8RnvzE5ZXqeM?type=png)
 
 - **Backend:** Python 3.9, FastAPI, Uvicorn, Gunicorn
 - **Database:** SQLite (development), PostgreSQL (production)
@@ -498,11 +505,15 @@ graph TD
 
 #### Q5: Real-time Dashboard Design
 
-![Dashboard Mock](https://mermaid.ink/img/pako:eNqNksFu2zAMhl-F4K6DnbRb6V1QgLXBsGHdOuy0oyDLTKLFljRJbpOi777KdlahK7aLYIv8_58iKZ3QeIuQim2hpfPO1s3GHRw4-wDQBY_8YdXtQue7bueP6JDLEODz9UYU7ub04Hvto4-mKM9fnJ7UUHeDSqpW5Fk_DWVA3nF-qNlS-NL2Oa4jnvfhEq-CUXSDDiT2OmRZ17Xnrm9FFWD7-gw1kXU2PJSRQ3CgjRPU_KGXJvjHAbAB1uA65yO1-2Js7eLbQWRZLw7N0LeFskMVZUyBdgVmAu3Y3vI-R9tM6nfaorXkRJbZH1yVnK1sN36aOsMDLPbgYLQZYYHEEcJtEZb3v-bYsbxkGGJg_2UWRRj7Qfx_u2rlPCR0XK8i9rvX0rrSsXa5DLyc2p6JYDFZqI-JYM4UZcnlslyUqyxPUygQFEVEtXM2G7GzQW_zTFQKc3CYBZlrW4t21DLvkW97idLsLmcyh__w59B-A4HW2Io?type=png)
+![Frontend Dashboard](frontend_dahbaord.JPG)
 
 **Dashboard Tech Stack:**
 
-![Dashboard Tech Stack](https://mermaid.ink/img/pako:eNqNksFu2zAMhl-F4K6DnbRb6V1QgLXBsGHdOuy0oyDLTKLFljRJbpOi777KdlahK7aLYIv8_58iKZ3QeIuQim2hpfPO1s3GHRw4-wDQBY_8YdXtQue7bueP6JDLEODz9UYU7ub04Hvto4-mKM9fnJ7UUHeDSqpW5Fk_DWVA3nF-qNlS-NL2Oa4jnvfhEq-CUXSDDiT2OmRZ17Xnrm9FFWD7-gw1kXU2PJSRQ3CgjRPU_KGXJvjHAbAB1uA65yO1-2Js7eLbQWRZLw7N0LeFskMVZUyBdgVmAu3Y3vI-R9tM6nfaorXkRJbZH1yVnK1sN36aOsMDLPbgYLQZYYHEEcJtEZb3v-bYsbxkGGJg_2UWRRj7Qfx_u2rlPCR0XK8i9rvX0rrSsXa5DLyc2p6JYDFZqI-JYM4UZcnlslyUqyxPUygQFEVEtXM2G7GzQW_zTFQKc3CYBZlrW4t21DLvkW97idLsLmcyh__w59B-A4HW2Io?type=png)
+- **Frontend**: React with Material-UI components
+- **Charting**: Chart.js for performance visualizations
+- **Real-time Updates**: Socket.io for live data streaming
+- **State Management**: Redux for application state
+- **Authentication**: JWT with role-based access control
 
 **Components:**
 1. **Order Queue Display**
@@ -519,13 +530,6 @@ graph TD
    - Total sales (daily, weekly, monthly views)
    - Popular items heat map
    - Revenue by table/section
-
-**Technology Choices:**
-- **Frontend**: React with Material-UI components
-- **Charting**: Chart.js for performance visualizations
-- **Real-time Updates**: Socket.io for live data streaming
-- **State Management**: Redux for application state
-- **Authentication**: JWT with role-based access control
 
 **Justification**:
 The combination of React and Socket.io provides optimal performance for real-time data visualization with minimal latency. Material-UI ensures a consistent, responsive design that works across devices. Redux manages complex state efficiently for the dashboard's multiple interdependent components.
@@ -764,4 +768,3 @@ Our system has been thoroughly tested for performance and reliability under high
 4. **Load testing** to measure performance under stress
 
 Results demonstrate the system's ability to handle hundreds of simultaneous orders while maintaining subsecond response times.
-
