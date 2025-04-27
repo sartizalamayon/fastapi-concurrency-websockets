@@ -40,7 +40,7 @@ The API is built with FastAPI and features:
 
 ## Technology Stack
 
-![Tech Stack](https://mermaid.ink/img/pako:eNp1UsFu2zAM_RWCpx5Sp0676XZJDHTD0A7b0KzdZeghsOVYqC0ZktwmQf99cmKnDYYdJYkk3-PjI0-kVBqJZtKoQoF31pbtQq0cGHsE8MEhfJj4yvZmv-_MGhUEVYH71cSUqkd9QP8NXOeFM1A3b9Ek2a9jBp1YQ0RR-iFSDYiDYwGlQD1OEkBP0PoAPVG1YIwKCVeqN7oLYAE2vLrApnLPwlsH1DV6bx0NNWaVFdCN5KLeBQBNi966eZLMgKlGxCKOHCzUfQT-AwG-Cq-bxxzd2LCmvE4DLfYnUMjPCvqKHCdGQvU4Qmhu1gd1JgFx1uRpxNIcN6XABiVa1ANGSs38LZj5r9VYb3X3HN0YKqe7SYX2v1c05FME49Fx1uF0SjItHNKMTlnfIGrCTXWdFoF5pU3VXRDg2cJpV-G9svUhIrVgbQ4SBXRnTZl4FcRD-Y0YZ49efV2YtqBxqfBRt27-uyGadj_hZBfNUVPKiIW8bkZjdXkdaP4QBt-lDKexbj_W7YfbfzHfbr0i0cxp6XzVEZZzJ91hIRcbGZ-OBvgVHMF0x6OdpjtOsqkfMU2HiWb77XL7HpAJ645HcZxOZrPb-L5r63b-B7uYwdM)
+![Tech Stack](https://mermaid.ink/img/pako:eNrVVclu2zAQ_RWCpxZw7QQ99GbYQNMWbYq0QHrqQZFGNhGK1JJUGgfw1_RfetAPaUhJthMnRdBLDwYMkcO3zJsZ8gJSIyBOi1pWzGrRlJXYGSmsBbOXYK2R8LZnLqTWTbPRC2EhoxLeLwtIRHNhdmJvP7qASOL9d6s3YrebXm0LnWrYUlclJJKM97CiEEbrYFfW4qqbV9BYrV3tRSa4V5KXMbBwBwvDCBNtfgvvYg_Ov3Mw5NcG9J8bqNU_N8BYUdJaM5FJ4CgDV-R9u-dg3Luy-CYFkx_s-KZZRs1SrpX2gzUxpBwkzHGl3ngtfMsXdGd2otHeH6VUG4jmZ1WKu8FTeFOkBkNPdqx4pHALqZEVlQ1CJMpuXZnHkVL74WZTKb3jtKEjBrAFfA1q4tKRkO8WU3nR79GmNpwQRZHC2s0oK_MCEuHDTOzHSspmw2nNxd_kPOO9BRlDnE6HELfwkMiEhGIxXcxRyhjiOIZ4PqLkjSTxCLU1m8c0ZuDnx2Dw1jqd8Q2dMo_kzIRXyPzyCZ5Aq7YOwXOZ5uiXZMkZJlm2ZCvMWIYBSRJI0hFFjZRJJtBnQ6lZn8wogx7VEPSiR-aXRSKCvtSUFMUlZCsCbJEtJuwm1aXIPJFP4NvZL55jxcLOGtvqU_j3-8HHGI_S445oDQlKE99IgdH8D72l6qV-k7u2c3c0tNJa54eOe2iVesvGH334yH5q-9Gfnn_0QvlD1fCfmz76Bb6VrDx27kcRvYdyqdGUx3d-_j5OmGfofgwx0AylHEHvVwu3tBLmQJzrcJvS0CRB4-UpzxB5kNvTJ20-bVa7q5u_WZ1Seb2lqzJP-w2F17wPxGE_TtJh84Gr60qrrHCeVwgRRsOZvFbRBu5X4ZoJNGU4oeSGzxB8RnvzE5ZXqeM?type=png)
 
 - **Backend:** Python 3.9, FastAPI, Uvicorn, Gunicorn
 - **Database:** SQLite (development), PostgreSQL (production)
@@ -50,6 +50,8 @@ The API is built with FastAPI and features:
 - **Deployment:** Render (Cloud Platform)
 
 ## System Architecture
+
+### High-Level Architecture
 
 ```
 ┌─────────────────┐          ┌──────────────────┐          ┌──────────────────┐
@@ -68,6 +70,10 @@ The API is built with FastAPI and features:
                              │                  │
                              └──────────────────┘
 ```
+
+### Comprehensive Technology Stack
+
+![Complete Tech Stack](https://mermaid.ink/img/pako:eNrVVclu2zAQ_RWCpxZw7QQ99GbYQNMWbYq0QHrqQZFGNhGK1JJUGgfw1_RfetAPaUhJthMnRdBLDwYMkcO3zJsZ8gJSIyBOi1pWzGrRlJXYGSmsBbOXYK2R8LZnLqTWTbPRC2EhoxLeLwtIRHNhdmJvP7qASOL9d6s3YrebXm0LnWrYUlclJJKM97CiEEbrYFfW4qqbV9BYrV3tRSa4V5KXMbBwBwvDCBNtfgvvYg_Ov3Mw5NcG9J8bqNU_N8BYUdJaM5FJ4CgDV-R9u-dg3Luy-CYFkx_s-KZZRs1SrpX2gzUxpBwkzHGl3ngtfMsXdGd2otHeH6VUG4jmZ1WKu8FTeFOkBkNPdqx4pHALqZEVlQ1CJMpuXZnHkVL74WZTKb3jtKEjBrAFfA1q4tKRkO8WU3nR79GmNpwQRZHC2s0oK_MCEuHDTOzHSspmw2nNxd_kPOO9BRlDnE6HELfwkMiEhGIxXcxRyhjiOIZ4PqLkjSTxCLU1m8c0ZuDnx2Dw1jqd8Q2dMo_kzIRXyPzyCZ5Aq7YOwXOZ5uiXZMkZJlm2ZCvMWIYBSRJI0hFFjZRJJtBnQ6lZn8wogx7VEPSiR-aXRSKCvtSUFMUlZCsCbJEtJuwm1aXIPJFP4NvZL55jxcLOGtvqU_j3-8HHGI_S445oDQlKE99IgdH8D72l6qV-k7u2c3c0tNJa54eOe2iVesvGH334yH5q-9Gfnn_0QvlD1fCfmz76Bb6VrDx27kcRvYdyqdGUx3d-_j5OmGfofgwx0AylHEHvVwu3tBLmQJzrcJvS0CRB4-UpzxB5kNvTJ20-bVa7q5u_WZ1Seb2lqzJP-w2F17wPxGE_TtJh84Gr60qrrHCeVwgRRsOZvFbRBu5X4ZoJNGU4oeSGzxB8RnvzE5ZXqeM?type=png)
 
 ### Data Flow Diagram
 
@@ -498,7 +504,11 @@ graph TD
 
 #### Q5: Real-time Dashboard Design
 
-![Dashboard Mock](https://mermaid.ink/img/pako:eNplksFuwjAMhl_FyrntgKgEBySkwWCMA9Jgh8Gh6mKFSoRUFTSt77697ViGBpdE-f8vthPnQFtBkIn27k_qClBZCVULOxsH8y7tQOPzVYCVmOGO0o02mN29TsXhQWzaW0GPeL0KtXOK66gFnQzN9tNjnIpWXoMyXzblrh3_YO-Nl7iqb1dkw-5K1xzLDdl8mhdSCiGsn-Mw8bx9zF9AvXtNBb6gNdCFU0pVZxjN4iH9CIlMMy8oCPUOrZZLyIl8QIwLlXF7mC9cw-Dt8zHDELkT9dgjRgTGu0dGwYR-wlQ2gk5JUiY9PY1QzwJzO_pTcDpHYxz-H_8V9cIdT_v9Cd_c2aYR1bOCVzlPZY_1Y_zb1rCQdQ-LUGEULg1wUTnbG5AVGlDKyPLjDf5JOhvMLCFRtptX7tT7nCbxPEry71QvULJh-eUNZCbCU-JqnZD3h7mKOeViGqVxlCym0yTJkOGqB0-cA0hTIvdopR90W6hU)
+![Dashboard Mock](https://mermaid.ink/img/pako:eNqNksFu2zAMhl-F4K6DnbRb6V1QgLXBsGHdOuy0oyDLTKLFljRJbpOi777KdlahK7aLYIv8_58iKZ3QeIuQim2hpfPO1s3GHRw4-wDQBY_8YdXtQue7bueP6JDLEODz9UYU7ub04Hvto4-mKM9fnJ7UUHeDSqpW5Fk_DWVA3nF-qNlS-NL2Oa4jnvfhEq-CUXSDDiT2OmRZ17Xnrm9FFWD7-gw1kXU2PJSRQ3CgjRPU_KGXJvjHAbAB1uA65yO1-2Js7eLbQWRZLw7N0LeFskMVZUyBdgVmAu3Y3vI-R9tM6nfaorXkRJbZH1yVnK1sN36aOsMDLPbgYLQZYYHEEcJtEZb3v-bYsbxkGGJg_2UWRRj7Qfx_u2rlPCR0XK8i9rvX0rrSsXa5DLyc2p6JYDFZqI-JYM4UZcnlslyUqyxPUygQFEVEtXM2G7GzQW_zTFQKc3CYBZlrW4t21DLvkW97idLsLmcyh__w59B-A4HW2Io?type=png)
+
+**Dashboard Tech Stack:**
+
+![Dashboard Tech Stack](https://mermaid.ink/img/pako:eNqNksFu2zAMhl-F4K6DnbRb6V1QgLXBsGHdOuy0oyDLTKLFljRJbpOi777KdlahK7aLYIv8_58iKZ3QeIuQim2hpfPO1s3GHRw4-wDQBY_8YdXtQue7bueP6JDLEODz9UYU7ub04Hvto4-mKM9fnJ7UUHeDSqpW5Fk_DWVA3nF-qNlS-NL2Oa4jnvfhEq-CUXSDDiT2OmRZ17Xnrm9FFWD7-gw1kXU2PJSRQ3CgjRPU_KGXJvjHAbAB1uA65yO1-2Js7eLbQWRZLw7N0LeFskMVZUyBdgVmAu3Y3vI-R9tM6nfaorXkRJbZH1yVnK1sN36aOsMDLPbgYLQZYYHEEcJtEZb3v-bYsbxkGGJg_2UWRRj7Qfx_u2rlPCR0XK8i9rvX0rrSsXa5DLyc2p6JYDFZqI-JYM4UZcnlslyUqyxPUygQFEVEtXM2G7GzQW_zTFQKc3CYBZlrW4t21DLvkW97idLsLmcyh__w59B-A4HW2Io?type=png)
 
 **Components:**
 1. **Order Queue Display**
