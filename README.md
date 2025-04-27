@@ -51,8 +51,6 @@ The API is built with FastAPI and features:
 
 ## System Architecture
 
-### High-Level Architecture
-
 ```
 ┌─────────────────┐          ┌──────────────────┐          ┌──────────────────┐
 │                 │          │                  │          │                  │
@@ -70,10 +68,6 @@ The API is built with FastAPI and features:
                              │                  │
                              └──────────────────┘
 ```
-
-### Comprehensive Technology Stack
-
-![Complete Tech Stack](https://mermaid.ink/img/pako:eNrVVclu2zAQ_RWCpxZw7QQ99GbYQNMWbYq0QHrqQZFGNhGK1JJUGgfw1_RfetAPaUhJthMnRdBLDwYMkcO3zJsZ8gJSIyBOi1pWzGrRlJXYGSmsBbOXYK2R8LZnLqTWTbPRC2EhoxLeLwtIRHNhdmJvP7qASOL9d6s3YrebXm0LnWrYUlclJJKM97CiEEbrYFfW4qqbV9BYrV3tRSa4V5KXMbBwBwvDCBNtfgvvYg_Ov3Mw5NcG9J8bqNU_N8BYUdJaM5FJ4CgDV-R9u-dg3Luy-CYFkx_s-KZZRs1SrpX2gzUxpBwkzHGl3ngtfMsXdGd2otHeH6VUG4jmZ1WKu8FTeFOkBkNPdqx4pHALqZEVlQ1CJMpuXZnHkVL74WZTKb3jtKEjBrAFfA1q4tKRkO8WU3nR79GmNpwQRZHC2s0oK_MCEuHDTOzHSspmw2nNxd_kPOO9BRlDnE6HELfwkMiEhGIxXcxRyhjiOIZ4PqLkjSTxCLU1m8c0ZuDnx2Dw1jqd8Q2dMo_kzIRXyPzyCZ5Aq7YOwXOZ5uiXZMkZJlm2ZCvMWIYBSRJI0hFFjZRJJtBnQ6lZn8wogx7VEPSiR-aXRSKCvtSUFMUlZCsCbJEtJuwm1aXIPJFP4NvZL55jxcLOGtvqU_j3-8HHGI_S445oDQlKE99IgdH8D72l6qV-k7u2c3c0tNJa54eOe2iVesvGH334yH5q-9Gfnn_0QvlD1fCfmz76Bb6VrDx27kcRvYdyqdGUx3d-_j5OmGfofgwx0AylHEHvVwu3tBLmQJzrcJvS0CRB4-UpzxB5kNvTJ20-bVa7q5u_WZ1Seb2lqzJP-w2F17wPxGE_TtJh84Gr60qrrHCeVwgRRsOZvFbRBu5X4ZoJNGU4oeSGzxB8RnvzE5ZXqeM?type=png)
 
 ### Data Flow Diagram
 
